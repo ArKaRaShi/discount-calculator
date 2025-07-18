@@ -54,7 +54,7 @@ This will start the development server, and you can access the app in your brows
 
 ### 4. Running Tests
 
-If you want to modify or add new test cases for the handlers and use case logic, you can do so easily. To run the tests, use the following command:
+If you want to modify or add new test cases for the handlers and use case logic, go to the \*.spec.ts files and apply the changes. To run the tests, use:
 
 ```bash
 npm run test
