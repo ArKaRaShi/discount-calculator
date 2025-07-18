@@ -32,7 +32,7 @@ The backend is structured under the `src/backend-modules` directory, and the log
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/discount-calculator.git
+git clone https://github.com/ArKaRaShi/discount-calculator.git
 ```
 
 ### 2. Install dependencies
