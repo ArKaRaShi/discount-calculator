@@ -18,9 +18,16 @@ The backend is structured under the `src/backend-modules` directory, and the log
 1. **List of Cart Items**: Products added to the cart with price, quantity, and product category.
 2. **List of Discounts**: Discounts applied to the cart items with mechanisms like fixed amount, percentage, and percentage by category.
 3. **Discount Application Logic**:
+
     - **No Duplicate Discount Types**: The use case ensures that no duplicate discount types are applied.
     - **Discount Sorting**: Discounts are applied in order of priority.
     - **Discount Handler**: A handler mechanism is used to apply the discounts based on the discount type and context.
+
+### Error Handling
+
+In this project, I used the `throw Error()` approach for error handling to simplify the implementation. However, in a real application, errors would typically be more specific. For instance, instead of using a generic `Error`, it's recommended to use specific error types like `ApplicationError` or domain-specific exceptions, which provide more context and make error handling and debugging easier.
+
+The `Error` is used here as a placeholder or "sign" to indicate a failure or an issue within the code, such as a duplicate discount source or other business logic issues. For a production-ready application, it must implement custom error classes and structured error responses, especially in APIs, to provide a better experience for developers and users.
 
 ### Assumptions
 
