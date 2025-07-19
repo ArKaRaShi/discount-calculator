@@ -1,3 +1,4 @@
+import { isEmpty } from "lodash";
 import { Discount } from "src/types/discount-type";
 import { CartItem } from "src/types/cart-item-type";
 import { CartItemWithDiscountSnapshot } from "src/types/cart-item-with-discount-snapshot-type";
@@ -21,6 +22,12 @@ export class ComputeDiscountsUseCase {
 
 	async execute(input: ComputeDiscountInput): Promise<ComputeDiscountOutput> {
 		const { cartItems, discounts } = input;
+
+		if (isEmpty(cartItems)) {
+			throw new Error(
+				"Cart items are required for discount computation."
+			);
+		}
 
 		// Ensure no duplicate discount sources
 		this.ensureNoDiscountSourceDuplication(discounts);
